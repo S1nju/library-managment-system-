@@ -4,6 +4,7 @@ import {
   cilBook,
   cilBriefcase,
   cilCart,
+  cilClock,
   cilCreditCard,
   cilGroup,
   cilHome,
@@ -36,10 +37,78 @@ const _nav = [
     allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
   },
   {
+<<<<<<< HEAD
     component: CNavItem,
     name: 'Livre',
     to:'/livre',
     icon: <CIcon icon={cilBook} customClassName="nav-icon" />,
+=======
+    component: CNavGroup,
+    name: 'Fournisseur',
+    icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Gestion Fournisseur',
+        to: '/fournisseur/gestionfournisseur',
+      },
+      {
+        component: CNavItem,
+        name: 'Achats',
+        to: '/fournisseur/achat',
+      },
+    ],
+    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
+  },
+  {
+    component: CNavGroup,
+    name: 'Produits',
+    icon: <CIcon icon={cilTags} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Gestion Produits',
+        to: '/produit/gestionproduit',
+      },
+      {
+        component: CNavItem,
+        name: 'Catégories',
+        to: '/produit/categories',
+      },
+    ],
+    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
+  },
+      {
+    component: CNavItem,
+    name: 'Gestion des Etudiants',
+    to: '/etudiants',
+    icon: <CIcon icon={cilGroup} customClassName="nav-icon" />,
+    allowedRoles: ['gestionnaire_etudiant', 'admin'],
+  },
+    {
+    component: CNavItem,
+    name: 'Gestion des Retards',
+    to: '/retards',
+    icon: <CIcon icon={cilClock} customClassName="nav-icon" />,
+    allowedRoles: ['gestionnaire_etudiant', 'admin'],
+  },
+  {
+    component: CNavGroup,
+    name: 'Client',
+    icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Gestion Client',
+        to: '/client/GestionClient',
+      },
+      {
+        component: CNavItem,
+        name: 'Les Ventes',
+        to: '/client/vente',
+      },
+    ],
+>>>>>>> 967a1aff888edfc463429677cfc18b1649fba3e0
     allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
   },
   {
@@ -61,6 +130,7 @@ const _nav = [
     icon: <CIcon icon={cilBriefcase} customClassName="nav-icon" />,
     allowedRoles: ['admin'],
   },
+
 ]
 
 export default _nav
