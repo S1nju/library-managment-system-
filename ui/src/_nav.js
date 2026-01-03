@@ -1,6 +1,7 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
 import {
+  cilBook,
   cilBriefcase,
   cilCart,
   cilCreditCard,
@@ -28,71 +29,17 @@ const _nav = [
     allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
   },
   {
-    component: CNavGroup,
-    name: 'Point de Vente',
-    to: '/PointDeVente',
+    component: CNavItem,
+    name: 'Emprunt',
+    to: '/emprunt',
     icon: <CIcon icon={cilCreditCard} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Point de Vente',
-        to: '/PointDeVente/PVente',
-      },
-    ],
     allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
   },
   {
-    component: CNavGroup,
-    name: 'Fournisseur',
-    icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Gestion Fournisseur',
-        to: '/fournisseur/gestionfournisseur',
-      },
-      {
-        component: CNavItem,
-        name: 'Achats',
-        to: '/fournisseur/achat',
-      },
-    ],
-    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
-  },
-  {
-    component: CNavGroup,
-    name: 'Produits',
-    icon: <CIcon icon={cilTags} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Gestion Produits',
-        to: '/produit/gestionproduit',
-      },
-      {
-        component: CNavItem,
-        name: 'Catégories',
-        to: '/produit/categories',
-      },
-    ],
-    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
-  },
-  {
-    component: CNavGroup,
-    name: 'Client',
-    icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Gestion Client',
-        to: '/client/GestionClient',
-      },
-      {
-        component: CNavItem,
-        name: 'Les Ventes',
-        to: '/client/vente',
-      },
-    ],
+    component: CNavItem,
+    name: 'Livre',
+    to:'/livre',
+    icon: <CIcon icon={cilBook} customClassName="nav-icon" />,
     allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
   },
   {

@@ -24,7 +24,7 @@ import { useUser } from '../../../context/UserContext'
 import { useReactToPrint } from 'react-to-print'
 import { EMPRUNT, ETUDIANT, LIVRE } from '../../../axios/api'
 
-const PVente = () => {
+const Emprunt = () => {
   // State management
     const [etudiants, setEtudiants] = useState([])
     const [livres, setLivres] = useState([])
@@ -390,7 +390,7 @@ const PVente = () => {
               <div style={{ display: 'none' }}>
         <div ref={contentRef} className="p-4">
           <div className="text-center mb-4">
-            <h2><strong>BON D'ACHAT</strong></h2>
+            <h2><strong>BON D'Emprunt</strong></h2>
             <hr />
           </div>
           
@@ -506,10 +506,7 @@ const PVente = () => {
                 <span>Quantité totale:</span>
                 <strong>{totalQuantity}</strong>
               </div>
-              <div className="d-flex justify-content-between mb-3">
-                <span>Total:</span>
-                <strong className="fs-4 text-primary">{total.toFixed(2)} DA</strong>
-              </div>
+        
               
               <div className="d-grid gap-2">
                 <CButton 
@@ -542,7 +539,7 @@ const PVente = () => {
                   disabled={cart.length === 0 || !selectedEtudiant}
                   className="fw-bold"
                 >
-                  💳 Finaliser la Vente
+                  Finaliser l'Emprunt
                 </CButton>
                     <CButton
           className="mt-3"
@@ -574,7 +571,7 @@ const PVente = () => {
         </CModalHeader>
         <CModalBody>
           <p><strong>Client:</strong> {clients.find(c => c.id == selectedClient)?.nom}</p>
-          <p><strong>Total articles:</strong> {totalQuantity}</p>
+          <p><strong>Total livres:</strong> {totalQuantity}</p>
           <p><strong>Montant total:</strong> {total.toFixed(2)} DA</p>
           <p>Voulez-vous confirmer cette vente ?</p>
         </CModalBody>
@@ -591,4 +588,4 @@ const PVente = () => {
   )
 }
 
-export default PVente
+export default Emprunt

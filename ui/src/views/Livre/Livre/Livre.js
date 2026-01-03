@@ -28,7 +28,7 @@ import CIcon from '@coreui/icons-react'
 import { useReactToPrint } from "react-to-print";
 import { useRef } from "react";
 
-const GestionProduit = () => {
+const Livre = () => {
   const [produit,setProduit]=React.useState([])
   const contentRef = useRef(null);
   const reactToPrintFn = useReactToPrint({ contentRef });
@@ -467,4 +467,4 @@ const GestionProduit = () => {
   )
 }
 
-export default GestionProduit
+export default Livre
