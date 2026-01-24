@@ -20,65 +20,19 @@ import { all } from 'axios'
 const _nav = [
   {
     component: CNavItem,
-    name: 'Tableau de bord',
-    to: '/dashboard',
-    icon: <CIcon icon={cilHome} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
-  },
-  {
-    component: CNavItem,
     name: 'Emprunt',
     to: '/emprunt',
     icon: <CIcon icon={cilCreditCard} customClassName="nav-icon" />,
-    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
+    allowedRoles: ['admin', 'user','responsable'],
   },
   {
-<<<<<<< HEAD
     component: CNavItem,
     name: 'Livre',
     to:'/livre',
     icon: <CIcon icon={cilBook} customClassName="nav-icon" />,
-=======
-    component: CNavGroup,
-    name: 'Fournisseur',
-    icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Gestion Fournisseur',
-        to: '/fournisseur/gestionfournisseur',
-      },
-      {
-        component: CNavItem,
-        name: 'Achats',
-        to: '/fournisseur/achat',
-      },
-    ],
-    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
+    allowedRoles: ['admin','gestionnaire_livres','reponsable'],
   },
-  {
-    component: CNavGroup,
-    name: 'Produits',
-    icon: <CIcon icon={cilTags} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Gestion Produits',
-        to: '/produit/gestionproduit',
-      },
-      {
-        component: CNavItem,
-        name: 'Catégories',
-        to: '/produit/categories',
-      },
-    ],
-    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
-  },
-      {
+    {
     component: CNavItem,
     name: 'Gestion des Etudiants',
     to: '/etudiants',
@@ -90,30 +44,12 @@ const _nav = [
     name: 'Gestion des Retards',
     to: '/retards',
     icon: <CIcon icon={cilClock} customClassName="nav-icon" />,
-    allowedRoles: ['gestionnaire_etudiant', 'admin'],
-  },
-  {
-    component: CNavGroup,
-    name: 'Client',
-    icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Gestion Client',
-        to: '/client/GestionClient',
-      },
-      {
-        component: CNavItem,
-        name: 'Les Ventes',
-        to: '/client/vente',
-      },
-    ],
->>>>>>> 967a1aff888edfc463429677cfc18b1649fba3e0
-    allowedRoles: ['admin', 'user','gestionnaire_etudiant'],
+    allowedRoles: ['responsable', 'admin'],
   },
   {
     component: CNavTitle,
     name: 'Administration',
+    allowedRoles:['admin']
   },
   {
     component: CNavItem,

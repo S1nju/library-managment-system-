@@ -1,5 +1,3 @@
-import GestionProduit from './gestionproduit'
-import Categorie from './categorie'
-import Brands from './brands'
+import Livre from './Livre'
 
-export { GestionProduit, Categorie, Brands }
+export { Livre }

@@ -1,3 +1,3 @@
-import Emprunt from './Emprunt'
-
-export { Emprunt }
+import Emprunt from './Emprunt/Emprunt'
+import GestionEmprunt from './GestionEmprunt/GestionEmprunt'
+export { Emprunt ,GestionEmprunt}
